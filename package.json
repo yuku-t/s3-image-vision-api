@@ -18,5 +18,8 @@
   "homepage": "https://github.com/yuku-t/s3-porn-image-checker#readme",
   "keywords": [
     "aws-lambda"
-  ]
+  ],
+  "dependencies": {
+    "node-cloud-vision-api": "^0.2.0"
+  }
 }
