@@ -1,0 +1,22 @@
+{
+  "name": "s3-porn-image-checker",
+  "version": "0.0.0",
+  "main": "index.js",
+  "description": "Check images uploaded to AWS S3 with Google Vision API",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/yuku-t/s3-porn-image-checker.git"
+  },
+  "author": "Yuku Takahashi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yuku-t/s3-porn-image-checker/issues"
+  },
+  "homepage": "https://github.com/yuku-t/s3-porn-image-checker#readme",
+  "keywords": [
+    "aws-lambda"
+  ]
+}
