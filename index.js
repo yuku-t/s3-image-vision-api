@@ -24,14 +24,7 @@ exports.handler = (event, context, callback) => {
     } else {
       let req = new vision.Request({
         image: new vision.Image({ url: url }),
-        features: [
-          new vision.Feature('FACE_DETECTION', 1),
-          new vision.Feature('LANDMARK_DETECTION', 1),
-          new vision.Feature('LOGO_DETECTION', 1),
-          new vision.Feature('LABEL_DETECTION', 1),
-          new vision.Feature('TEXT_DETECTION', 1),
-          new vision.Feature('SAFE_SEARCH_DETECTION', 1)
-        ]
+        features: config.FEATURES.map(arr => new vision.Feature(arr[0], arr[1]))
       });
       vision.annotate(req).then(res => {
         sns.publish({
