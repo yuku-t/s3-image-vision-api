@@ -28,7 +28,11 @@ exports.handler = (event, context, callback) => {
       });
       vision.annotate(req).then(res => {
         sns.publish({
-          Message: JSON.stringify(res),
+          Message: JSON.stringify({
+            bucket: bucket,
+            key: objectKey,
+            response: res,
+          }),
           TopicArn: config.TOPIC_ARN
         }, (err, data) => {
           if (err) {
